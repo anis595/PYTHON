@@ -23,6 +23,11 @@ carnet_adresses = [
 ]
 
 
+for addresse in carnet_adresses:
+    for key, value in addresse.items():
+        print(key, value)
+
+
 def ajouter_adresse():
     voie = print(input("numéro de voie"))
     complemnt = input("complément")
@@ -37,11 +42,6 @@ def ajouter_adresse():
         "commune": commune,
         "code postal": code_postale,
     }
-
-
-# for addresse in carnet_adresses:
-#     for key, value in addresse.items():
-#         print(key, value)
 
 
 # def menu_adre(adresses):
