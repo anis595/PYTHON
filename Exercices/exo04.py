@@ -4,3 +4,4 @@ variable_a = True
 variable_b = False
 
 print(variable_a >= 18) and (variable_b < 18)
+print(age)
