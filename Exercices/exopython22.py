@@ -5,7 +5,12 @@
 
 
 def filtrer_bonnes_note(liste):
-
+    bonne_notes = []
     for note in liste:
         if note >= 10:
-            print()
+            bonne_notes.append(note)
+
+    return bonne_notes
+
+
+print(filtrer_bonnes_note([10, 2, 19]))

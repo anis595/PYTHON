@@ -1,0 +1,22 @@
+[
+    {
+        "prenom": "toto",
+        "age": 30,
+        "email": "toto@email.com"
+    },
+    {
+        "prenom": "toto",
+        "age": 30,
+        "email": "toto@email.com"
+    },
+    {
+        "prenom": "toti",
+        "age": 30,
+        "email": "toto@email.com"
+    },
+    {
+        "prenom": "toti",
+        "age": 30,
+        "email": "toto@email.com"
+    }
+]
