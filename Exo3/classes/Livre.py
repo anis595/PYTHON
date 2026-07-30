@@ -1,5 +1,5 @@
 class Livre:
-    def __init__(self, isbn, titre, auteur, annee, disponible):
+    def __init__(self, isbn, titre, auteur, annee):
         self.isbn = isbn
         self.titre = titre
         self.auteur = auteur
@@ -7,11 +7,14 @@ class Livre:
         self.disponible = True
 
     def emprunter(self):
-        if self.disponible == False:
-            print("Livre pas dispo ")
+        if self.disponible:
+            self.disponible = False
+        else:
+            print(f" {self.titre} est déjà emprunté !")
 
     def retourne(self):
-        pass
+        self.disponible = True
 
     def afficher(self):
-        return f" Numéro : {self.isbn}\n Titre : {self.titre}\n Auteur : {self.auteur}\n Année : {self.annee}\n Disponibilité : {self.disponible}  "
+        statut = "Disponible" if self.disponible else "Emprunté"
+        return f" Numéro : {self.isbn}\n Titre : {self.titre}\n Auteur : {self.auteur}\n Année : {self.annee}\n Disponibilité : {statut}  "
