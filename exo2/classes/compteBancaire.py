@@ -4,6 +4,11 @@ class CompteBancaire:
         self.nom = nom
         self.solde = solde
 
+    def afficher(self):
+        print(f"compte bancaire numéro : {self.numero_compte}")
+        print(f"Appartient à : {self.nom}")
+        print(f"solde : {self.solde} €")
+
     def versement(self, montant):
         if montant < 0:
             print("Veuillez saisir un montant positif")
@@ -17,13 +22,10 @@ class CompteBancaire:
         else:
             self.solde += montant
             self.afficher()
-
-    def afficher(self):
-        print(f"compte bancaire numéro : {self.numero_compte}")
-        print(f"Appartient à : {self.nom}")
-        print(f"solde : {self.solde} €")
+            self.agios()
 
     def agios(self):
         if self.solde < 0:
-            montant = self.solde * 0.05
+            montant = abs(self.solde * 0.05)
+            self.solde -= montant
             self.afficher()

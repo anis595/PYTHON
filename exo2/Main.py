@@ -1,6 +1,8 @@
 from classes.CompteBancaire import CompteBancaire
 
-compte_bancaire = compte_bancaire(1234656253, "La bete", 1000000)
+compte = CompteBancaire(51454154, "compte 10", 100)
 
+compte.retrait(-50)
+compte.retrait(-100)
 
-compte_bancaire.versement()
+compte.versement(150)
