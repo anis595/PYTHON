@@ -24,7 +24,7 @@ class Bibliotheque:
 
     def retirer_livre(self, titre):
         for livre in self.livres:
-            if livre.titre.lower() == titre.lower():
+            if livre.titre == titre:
                 choix = input(f" Voulez vous supprimer le livre ?  (Y/N)")
                 print(livre.afficher())
                 if choix.lower() == "Y":
